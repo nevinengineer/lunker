@@ -73,7 +73,7 @@ func _define_points():
 		if i >=  2 and i % 2 == 0:
 			var eyelet_line2d = Line2D.new()
 			eyelet_line2d.set_default_color(Color.black)
-			var eyelet_width = clamp(32/i, 8, 16)
+			var eyelet_width = clamp(16/i, 8, 16)
 			eyelet_line2d.set_width(eyelet_width)
 			var eyelet_height = clamp(140/(i/2), 12, 80)
 			eyelet_line2d.set_points([Vector2(x_offset, 0), Vector2(x_offset + 16, 16), Vector2(x_offset + 16, eyelet_height + 16/i)])
