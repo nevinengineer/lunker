@@ -1,0 +1,49 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow_jig004.png" type="Texture" id=1]
+[ext_resource path="res://Bait/Scripts/BaitKinematic.gd" type="Script" id=2]
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow_jig005.png" type="Texture" id=3]
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow_jig000.png" type="Texture" id=4]
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow_jig001.png" type="Texture" id=5]
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow000.png" type="Texture" id=6]
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow_jig002.png" type="Texture" id=7]
+[ext_resource path="res://Bait/Sprites/SpinnyMinnow/spinny_minnow_jig003.png" type="Texture" id=8]
+[ext_resource path="res://icon.png" type="Texture" id=9]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 3.99998
+height = 16.0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "placeholder",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "rest",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "move",
+"speed": 5.0
+} ]
+
+[node name="BaitKinematic" type="KinematicBody2D"]
+position = Vector2( 0, -128 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." groups=["bait"]]
+frames = SubResource( 3 )
+animation = "rest"
+flip_v = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2( 2, 2 )

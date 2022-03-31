@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Reel/Sprites/reel_handle.png" type="Texture" id=1]
+[ext_resource path="res://Line/Sprites/white_spool.png" type="Texture" id=2]
+[ext_resource path="res://Reel/Sprites/reel_body.png" type="Texture" id=3]
+
+[node name="ReelSprite" type="Sprite"]
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="SpoolTop" type="Position2D" parent="."]
+position = Vector2( 37, -12 )
+
+[node name="SpoolBottom" type="Position2D" parent="."]
+position = Vector2( 37, 26 )
+
+[node name="SpoolSprite" type="Sprite" parent="."]
+position = Vector2( 37, 7 )
+scale = Vector2( 0.5, 0.6 )
+texture = ExtResource( 2 )
+
+[node name="HandleSprite" type="Sprite" parent="."]
+position = Vector2( -18, 9 )
+rotation = -6.28319
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -13, -12 )

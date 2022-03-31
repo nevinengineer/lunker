@@ -1,0 +1,55 @@
+[gd_resource type="Resource" load_steps=18 format=2]
+
+[ext_resource path="res://Baits/Bait Scripts/base_bait_stats.gd" type="Script" id=1]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig007.png" type="Texture" id=2]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig002.png" type="Texture" id=3]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig006.png" type="Texture" id=4]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap.png" type="Texture" id=5]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig000.png" type="Texture" id=6]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig001.png" type="Texture" id=7]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig003.png" type="Texture" id=8]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig004.png" type="Texture" id=9]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_jig005.png" type="Texture" id=10]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_error005.png" type="Texture" id=11]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_error000.png" type="Texture" id=12]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_error003.png" type="Texture" id=13]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_error001.png" type="Texture" id=14]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_error004.png" type="Texture" id=15]
+[ext_resource path="res://Baits/Bait Sprites/ShadShadThing/shadrap_error002.png" type="Texture" id=16]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 15 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "error",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "jig_step",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "jig",
+"speed": 12.0
+} ]
+
+[resource]
+script = ExtResource( 1 )
+name = "Shad Shad Thing"
+price = 8.0
+depth = 11
+sink_rate = 80.0
+dive_rate = 10.0
+influence = 200.0
+jig_pattern = [ "Left", "Right" ]
+jig_pattern_length = 4
+texture = ExtResource( 5 )
+frames = SubResource( 1 )
+tackle_type = 0

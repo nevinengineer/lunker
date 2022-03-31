@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Sprites/fishing_pole_icon.png" type="Texture" id=2]
+[ext_resource path="res://UI/Scripts/fishing_ui.gd" type="Script" id=3]
+
+[node name="FishingUI" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -80.0
+script = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 984.0
+margin_bottom = 500.0
+alignment = 2
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 984.0
+margin_right = 984.0
+margin_bottom = 500.0
+
+[node name="RodRotationSprite" type="Sprite" parent="HBoxContainer/Control"]
+position = Vector2( -492, 560 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -200 )

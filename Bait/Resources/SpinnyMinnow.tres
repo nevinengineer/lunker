@@ -1,0 +1,47 @@
+[gd_resource type="Resource" load_steps=10 format=2]
+
+[ext_resource path="res://Baits/Bait Scripts/base_bait_stats.gd" type="Script" id=1]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow_jig001.png" type="Texture" id=2]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow_jig004.png" type="Texture" id=3]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow_jig002.png" type="Texture" id=4]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow_jig005.png" type="Texture" id=5]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow_jig003.png" type="Texture" id=6]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow000.png" type="Texture" id=7]
+[ext_resource path="res://Baits/Bait Sprites/SpinnyMinnow/spinny_minnow_jig000.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "error",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "jig_step",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "jig",
+"speed": 12.0
+} ]
+
+[resource]
+script = ExtResource( 1 )
+name = "Spinny Minnow"
+price = 5.0
+depth = 14
+sink_rate = 60.0
+dive_rate = 70.0
+influence = 5.0
+jig_pattern = [ "Left", "Right", "Up" ]
+jig_pattern_length = 3
+texture = ExtResource( 7 )
+frames = SubResource( 1 )
+tackle_type = 0
